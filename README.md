@@ -2,15 +2,6 @@
 
 Neon-themed Snake game for desktop and mobile.
 
-## Run
-
-```powershell
-cd E:\codex\snake-game
-python -m http.server 8080
-```
-
-Open `http://localhost:8080`.
-
 ## Controls
 
 - Desktop: `Arrow Keys` or `W A S D`
@@ -29,8 +20,3 @@ Open `http://localhost:8080`.
 
 - High score, low score, and games played are saved in `localStorage`.
 
-## Deploy
-
-- Vercel: uses `vercel.json`
-- Netlify: uses `netlify.toml`
-- GitHub Pages: use branch deploy from root (`/`) with `.nojekyll`
