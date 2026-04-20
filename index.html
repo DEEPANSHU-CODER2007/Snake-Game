@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08110c">
+  <title>Snake Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell" id="appShell">
+    <header class="top-bar" data-ui-layer="content">
+      <h1>Snake Game</h1>
+      <div class="scoreboard" aria-live="polite">
+        <article>
+          <p>Score</p>
+          <strong id="currentScore">0</strong>
+        </article>
+        <article>
+          <p>High</p>
+          <strong id="highScore">--</strong>
+        </article>
+        <article>
+          <p>Low</p>
+          <strong id="lowScore">--</strong>
+        </article>
+      </div>
+    </header>
+
+    <section class="play-area" data-ui-layer="content">
+      <div class="board-zone">
+        <div class="side-actions">
+          <button id="pauseSideBtn" class="btn-secondary" type="button" aria-label="Pause game">Pause</button>
+          <button id="settingsSideBtn" class="btn-secondary" type="button" aria-label="Open settings">Settings</button>
+        </div>
+        <div class="board-wrap" id="boardWrap">
+          <canvas id="board" width="600" height="600" role="img" aria-label="Snake game board"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="mobile-controls" aria-label="Mobile controls" data-ui-layer="content">
+      <button class="btn-secondary" type="button" data-dir="up">Up</button>
+      <div class="mobile-mid">
+        <button class="btn-secondary" type="button" data-dir="left">Left</button>
+        <button id="mobilePause" class="btn-secondary" type="button">Pause</button>
+        <button class="btn-secondary" type="button" data-dir="right">Right</button>
+      </div>
+      <button class="btn-secondary" type="button" data-dir="down">Down</button>
+    </section>
+
+    <p id="gamesPlayed" class="games-played" data-ui-layer="content">Games Played: 0</p>
+    <div id="scorePop" class="score-pop" aria-hidden="true">+1</div>
+    <p id="srAnnouncements" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+
+    <div id="startScreen" class="overlay-screen visible" role="dialog" aria-modal="true" aria-labelledby="startTitle">
+      <div class="overlay-card start-card">
+        <h2 id="startTitle">Snake Game</h2>
+        <div class="start-snake-anim" aria-hidden="true">
+          <span class="start-food"></span>
+          <span class="start-segment seg-1 snake-head"></span>
+          <span class="start-segment seg-2"></span>
+          <span class="start-segment seg-3"></span>
+          <span class="start-segment seg-4"></span>
+          <span class="start-segment seg-5"></span>
+        </div>
+        <div class="menu-actions">
+          <button id="playBtn" class="big-btn btn-primary" type="button">Play Game</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="pauseMenu" class="overlay-screen" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="pauseTitle">
+      <div class="overlay-card pause-card">
+        <h2 id="pauseTitle">Paused</h2>
+        <div class="menu-actions">
+          <button id="unpauseBtn" class="big-btn btn-primary" type="button">Resume</button>
+          <button id="pauseNewGameBtn" class="btn-secondary" type="button">Restart</button>
+          <button id="exitBtn" class="btn-secondary danger" type="button">Exit</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="settingsModal" class="overlay-screen" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="settingsTitle">
+      <div class="overlay-card settings-card">
+        <h2 id="settingsTitle">Settings</h2>
+        <label>
+          Game Speed
+          <div class="inline-setting">
+            <input id="speedInput" type="range" min="6" max="18" step="1" value="10" aria-label="Game Speed">
+            <span id="speedValue">10</span>
+          </div>
+        </label>
+
+        <label class="check-setting">
+          <input id="gridToggle" type="checkbox" checked>
+          Show Grid
+        </label>
+
+        <label class="check-setting">
+          <input id="wrapToggle" type="checkbox">
+          Wrap At Walls
+        </label>
+
+        <label class="check-setting">
+          <input id="soundToggle" type="checkbox" checked>
+          Sound Enabled
+        </label>
+
+        <div class="menu-actions">
+          <button id="settingsBackBtn" class="btn-primary" type="button">Back</button>
+          <button id="resetStatsBtn" class="btn-secondary danger" type="button">Reset Records</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="gameOverScreen" class="overlay-screen" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="gameOverTitle" aria-describedby="finalScoreText">
+      <div class="overlay-card gameover-card">
+        <h2 id="gameOverTitle">Game Over</h2>
+        <p id="finalScoreText">Score: 0</p>
+        <div class="menu-actions">
+          <button id="playAgainBtn" class="big-btn btn-primary" type="button">Play Again</button>
+          <button id="gameOverSettingsBtn" class="btn-secondary" type="button">Settings</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
