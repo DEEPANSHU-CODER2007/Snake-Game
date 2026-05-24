@@ -1,6 +1,7 @@
 # Snake Game
 
-Neon-themed Snake game for desktop and mobile.
+
+ Neon-themed Snake game for desktop and mobile.
 
 ## Controls
 
