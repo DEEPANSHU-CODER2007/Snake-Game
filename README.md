@@ -3,6 +3,7 @@
 
  Neon-themed Snake game for desktop and mobile.
 
+
 ## Controls
 
 - Desktop: `Arrow Keys` or `W A S D`.
@@ -15,7 +16,7 @@
 - Speed
 - Show Grid
 - Wrap At Walls
-- Sound Enabled
+- Sound Enabled .
 
 ## Save Data
 
