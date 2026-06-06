@@ -22,7 +22,8 @@
 
 - High score, low score, and games played are saved in `localStorage`.
 <hr>
-#link of website
+# link of website<br>
+
 -https://deepanshu-coder2007.github.io/Snake-Game/
 
 
