@@ -4,7 +4,7 @@
  Neon-themed Snake game for desktop and mobile.
 
 
-## Controls
+## Controls :
 
 
 - Desktop: `Arrow Keys` or `W A S D`.
@@ -27,6 +27,7 @@
 
 
 - High score, low score, and games played are saved in `localStorage`.
+  
 <hr>
 
 
