@@ -26,7 +26,7 @@
 ## Save Data
 
 
-- High score, low score, and games played are saved in `localStorage`.
+- High score, low score, and games played are saved in  `localStorage`.
   
 <hr>
 
