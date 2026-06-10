@@ -35,7 +35,8 @@
 
 -https://deepanshu-coder2007.github.io/Snake-Game/
 
-
+<hr>
+<br>
 #Update of this game comming soon
 
 
