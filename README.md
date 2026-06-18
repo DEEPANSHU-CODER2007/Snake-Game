@@ -3,7 +3,7 @@
 
  Neon-themed Snake game for desktop and mobile.
 
-
+<hr>
 ## Controls :
 
 
@@ -12,7 +12,7 @@
 - Pause/Resume: `Space` or pause button.
 - Mobile: swipe on board + on-screen direction buttons.
 
-
+<hr>
 
 ## Settings
 
@@ -21,7 +21,7 @@
 - Wrap At Walls
 - Sound Enabled .
 
-
+<hr>
 
 ## Save Data
 
