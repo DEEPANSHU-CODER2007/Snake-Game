@@ -37,7 +37,7 @@
 
 <hr>
 <br>
-#Update of this game comming soon
+
 
 
 
