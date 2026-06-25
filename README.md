@@ -36,7 +36,7 @@
 -https://deepanshu-coder2007.github.io/Snake-Game/
 
 <hr>
-<br>
+
 
 ## Update 
 
