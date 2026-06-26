@@ -1,11 +1,10 @@
-# Snake Game
-
-
+ # Snake Game 
+ <br>
  Neon-themed Snake game for desktop and mobile.
 
 <hr>
-## Controls :
 
+## Controls
 
 - Desktop: `Arrow Keys` or `W A S D`.
 - Start/Play Again: `Enter` or on-screen button.
@@ -25,18 +24,15 @@
 
 ## Save Data
 
-
 - High score, low score, and games played are saved in  `localStorage`.
   
 <hr>
-
 
 # link of website<br>
 
 -https://deepanshu-coder2007.github.io/Snake-Game/
 
 <hr>
-
 
 ## Update 
 
