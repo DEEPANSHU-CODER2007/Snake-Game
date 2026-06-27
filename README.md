@@ -18,7 +18,7 @@
 - Speed
 - Show Grid
 - Wrap At Walls
-- Sound Enabled .
+- Sound Enabled 
 
 <hr>
 
